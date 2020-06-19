@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+</head>
+<body>
+  <script>
+    let size = 8;
+    let board = "";
+    for (let j = 0; j < size; j++) {
+        for (let i = 0; i < size; i++) {
+          if ((i+j)%2) {
+            board += " ";
+          } else {
+              board += "#";
+            }
+        };
+        board += "\n";
+    };
+    console.log(board);
+  </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function isEven(number) {
+        if (isNaN(Number(number))) {
+          return "Not a number";
+        }
+        else if (number == 0) {
+          return true;
+        } else if (number == 1) {
+            return false;
+          }
+            else if (number < 0) {
+              return isEven(Number(number)+2);
+            }
+              else {
+                return isEven(number-2);
+              }
+      };
+      console.log(isEven(prompt("Enter number")));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let arrayToList = function(numbers) {
+        let obj = null;
+        for (let i = numbers.length - 1; i >= 0; i--) {
+          obj = {value: numbers[i], rest: obj};
+        };
+        return obj;
+      };
+
+      let listToArray = function(list) {
+        let arr = [];
+        while (list !== null) {
+          arr.push(list.value);
+          list = list.rest;
+        };
+        return arr;
+      };
+
+      let prepend = function(array, element) {
+        return { value: element, rest : array};
+      };
+
+      let nth = function(n, list) {
+        let listRest;
+        for (let i = 0; i > n; i++) {
+          listRest = list.rest;
+          if (listRest == null) { i = n };
+        };
+        if (listRest == null) {return undefined}
+        else
+        {return listRest.value} ;
+      };
+
+      console.log(arrayToList([10,20]));
+      console.log(listToArray(arrayToList([10,20])));
+      console.log(prepend(20,[10,20]));
+    </script>
+  </body>
+</html>

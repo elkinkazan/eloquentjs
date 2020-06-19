@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+/*
+* комментарии
+*/
+    <script type="text/javascript">
+      let countBs = (str, ch) => {
+        let counter = 0;
+        for (let i = 0; i < str.length; i++) {
+          if (str.charAt(i) === ch) {counter++};
+          // str[i]]
+        }
+        return counter;
+      };
+      console.log(countBs(prompt("Enter string"), prompt("Enter char")));
+    </script>
+  </body>
+</html>

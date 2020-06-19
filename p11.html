@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    function deepEqual(a, b) {
+
+      if (a === b) return true;
+
+      if ((typeof a != "object")||(typeof b != "object")||(a == null)||(b == null)) return false;
+
+      let keysA = Object.keys(a), keysB = Object.keys(b);
+      if (keysA.length !== keysB.length) return false;
+
+      for (let key of keysA) {
+        if ((!keysB.includes(key))||(!deepEqual(a[key], b[key]))) return false;
+      };
+
+      return true;
+
+    };
+
+    console.log(deepEqual({here: {is: "an"}, object: 2}, {here: 1, object: 2}));
+  </script>
+</body>
+
+</html>

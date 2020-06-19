@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      let a = "abc";
+      a = "кошка";
+      let b="";
+      let c = b;
+      for (let i = 0; i < a.length; i++){
+      b += a.charAt(i);
+      }
+      a[0] = "m"; // не изменяет!!!!!!!!!!!!!
+      console.log(`Литерал шаблона демонстрирует c =  ${c} , a = ${a}`);
+
+      let obj1 = { visitors: 1, score: 2};
+      let obj2 = obj1;
+      obj1.visitors = 0;
+      let obj3 = { visitors: 1, score: 2};
+      console.log(`${obj2.visitors}`);
+    </script>
+  </body>
+</html>
